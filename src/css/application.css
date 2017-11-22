@@ -1,0 +1,8 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.table-text {
+    -fx-fill : -fx-text-background-color ;
+}
+
+.table-row-cell, .text-area {
+    -fx-font-size : 15px!important;
+}

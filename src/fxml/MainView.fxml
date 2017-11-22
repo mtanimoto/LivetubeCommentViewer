@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="844.0" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <Label layoutX="14.0" layoutY="20.0" text="配信者名" />
+      <TextField fx:id="urlField" layoutX="79.0" layoutY="15.0" prefHeight="28.0" prefWidth="671.0" />
+      <Button fx:id="connect" layoutX="761.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleConnect" onKeyPressed="#onConnect" prefHeight="28.0" prefWidth="69.0" text="接続" />
+      <Label fx:id="info" layoutX="14.0" layoutY="48.0" prefHeight="26.0" prefWidth="238.0" textFill="RED" />
+      <Hyperlink fx:id="urlLink" alignment="CENTER_RIGHT" disable="true" layoutX="255.0" layoutY="48.0" onAction="#onUrlLink" prefHeight="26.0" prefWidth="574.0" text="非接続" />
+      <Button fx:id="findDeliveryButton" layoutX="14.0" layoutY="79.0" mnemonicParsing="false" onAction="#findDelivery" prefHeight="28.0" prefWidth="170.0" text="配信一覧取得" />
+      <ListView fx:id="authrorListView" layoutX="14.0" layoutY="107.0" prefHeight="306.0" prefWidth="170.0" />
+      <TableView fx:id="commentTableView" disable="true" layoutX="195.0" layoutY="79.0" onKeyPressed="#onCommentView" prefHeight="334.0" prefWidth="635.0">
+        <columns>
+          <TableColumn fx:id="tableColumnCommentNumber" prefWidth="60.0" text="No." />
+            <TableColumn fx:id="tableColumnName" prefWidth="100.0" text="name" />
+            <TableColumn fx:id="tableColumnTime" prefWidth="122.0" text="time" />
+          <TableColumn fx:id="tableColumnComment" prefWidth="331.0" text="comment" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </TableView>
+      <TextArea id="commentArea" fx:id="commentArea" disable="true" layoutX="14.0" layoutY="420.0" onKeyPressed="#onCommentArea" prefHeight="66.0" prefWidth="740.0" />
+      <Button fx:id="send" disable="true" layoutX="761.0" layoutY="458.0" mnemonicParsing="false" onAction="#handleSend" onKeyPressed="#onSend" prefHeight="28.0" prefWidth="69.0" text="送信" />
+   </children>
+</AnchorPane>
